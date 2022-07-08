@@ -10,6 +10,15 @@
 .mainColor {
     background-image: linear-gradient(to bottom, #ffffff, #f4f2fd, #e8e6fb, #dcdafa, #d0cef8, #d0cef8, #d0cef8, #d0cef8, #dcdafa, #e8e6fb, #f4f2fd, #ffffff);
 }
+.viewFull {
+    height: 100vh;
+}
+* {
+    list-style: none;
+    text-decoration: none !important;
+  }
+  
+
 
 #header img{
     width: 95px;
