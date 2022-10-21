@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/assets/Logo Tecnologia  Moderno Degradado .png" />
+    <link rel="icon" href="/img/Logo Tecnologia  Moderno Degradado .png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,7 +16,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="/css/estilos.css" />
     <title>Testudine</title>
     <style>
       .mainBack {
@@ -53,7 +53,7 @@
         "
       >
         <a
-          href="./school.html"
+          href="/school"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none pt-3 ps-3"
         >
           <svg
@@ -77,7 +77,7 @@
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="./index.html" class="nav-link active" aria-current="page">
+            <a href="/" class="nav-link active" aria-current="page">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -99,7 +99,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link link-dark">
+            <a href="/notaPrueba" class="nav-link link-dark">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -119,7 +119,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link link-dark">
+            <a href="/once" class="nav-link link-dark">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -135,6 +135,51 @@
               Usuarios
             </a>
           </li>
+          <%if(admin){%>
+            <li>
+              <a href="/crearN" class="nav-link link-dark">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-server"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M1.333 2.667C1.333 1.194 4.318 0 8 0s6.667 1.194 6.667 2.667V4c0 1.473-2.985 2.667-6.667 2.667S1.333 5.473 1.333 4V2.667z"
+                  />
+                  <path
+                    d="M1.333 6.334v3C1.333 10.805 4.318 12 8 12s6.667-1.194 6.667-2.667V6.334a6.51 6.51 0 0 1-1.458.79C11.81 7.684 9.967 8 8 8c-1.966 0-3.809-.317-5.208-.876a6.508 6.508 0 0 1-1.458-.79z"
+                  />
+                  <path
+                    d="M14.667 11.668a6.51 6.51 0 0 1-1.458.789c-1.4.56-3.242.876-5.21.876-1.966 0-3.809-.316-5.208-.876a6.51 6.51 0 0 1-1.458-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667v-1.665z"
+                  />
+                </svg>
+                Crear notas
+              </a>
+            </li>
+            <li>
+              <a href="/onceA" class="nav-link link-dark text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-file-earmark-arrow-up"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.5 11.5a.5.5 0 0 1-1 0V7.707L6.354 8.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 7.707V11.5z"
+                  />
+                  <path
+                    d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"
+                  />
+                </svg>
+                Subir notas
+              </a>
+            </li>
+          <%}%>
         </ul>
         <hr />
         <div class="dropdown pb-3">
@@ -192,7 +237,7 @@
         </div>
         <div class="container-fluid">
           <ul class="list-group">
-            <a href="onceA.html">
+            <a href="/onceA">
               <li
                 class="list-group-item d-flex justify-content-between align-items-start"
               >
@@ -202,7 +247,7 @@
                 </div>
               </li>
             </a>
-            <a href="./once.html">
+            <a href="/once">
               <li
                 class="list-group-item d-flex justify-content-between align-items-start"
               >

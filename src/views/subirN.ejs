@@ -53,7 +53,7 @@
         "
       >
         <a
-          href="./school.html"
+          href="/school"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none pt-3 ps-3"
         >
           <svg
@@ -77,7 +77,7 @@
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="/school" class="nav-link text-black" aria-current="page">
+            <a href="/" class="nav-link text-black" aria-current="page">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -88,18 +88,18 @@
               >
                 <path
                   fill-rule="evenodd"
-                  d="m8 3.240 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.240l6-6zm5-.740V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+                  d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
                 />
                 <path
                   fill-rule="evenodd"
-                  d="M7.240 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.240 1.5z"
+                  d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
                 />
               </svg>
               Home
             </a>
           </li>
           <li>
-            <a href="/userPrueba" class="nav-link link-dark active text-white">
+            <a href="/userPrueba" class="nav-link link-dark">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -119,7 +119,7 @@
             </a>
           </li>
           <li>
-            <a href="/onceA" class="nav-link link-dark">
+            <a href="/once" class="nav-link link-dark">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -133,6 +133,29 @@
                 />
               </svg>
               Usuarios
+            </a>
+          </li>
+          <li>
+            <a href="/crearN" class="nav-link link-dark">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-server"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M1.333 2.667C1.333 1.194 4.318 0 8 0s6.667 1.194 6.667 2.667V4c0 1.473-2.985 2.667-6.667 2.667S1.333 5.473 1.333 4V2.667z"
+                />
+                <path
+                  d="M1.333 6.334v3C1.333 10.805 4.318 12 8 12s6.667-1.194 6.667-2.667V6.334a6.51 6.51 0 0 1-1.458.79C11.81 7.684 9.967 8 8 8c-1.966 0-3.809-.317-5.208-.876a6.508 6.508 0 0 1-1.458-.79z"
+                />
+                <path
+                  d="M14.667 11.668a6.51 6.51 0 0 1-1.458.789c-1.4.56-3.242.876-5.21.876-1.966 0-3.809-.316-5.208-.876a6.51 6.51 0 0 1-1.458-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667v-1.665z"
+                />
+              </svg>
+              Crear notas
             </a>
           </li>
           <%if(admin){%>
@@ -160,7 +183,7 @@
               </a>
             </li>
             <li>
-              <a href="/onceA" class="nav-link link-dark text-white">
+              <a href="/onceA" class="nav-link link-dark active">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -229,52 +252,63 @@
       <!--/Side Bar-->
       <!--Main-->
       <div
-        class="p-5 mb-1 bg-light rounded-3 d-flex flex-column text-center mainBack align-self-center"
-        style="width: 70%; height: 99.1vh"
-      >
-        <div class="container-fluid pb-3">
-          <h1 class="display-6 fw-bold text-testudine">Notas</h1>
-        </div>
+        class="p-5 mb-1 bg-light rounded-3 d-flex flex-column text-center mainBack"
+        style="width: 70%; justify-self: end; height: 100vh">
 
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Tipo</th>
-              <th scope="col">Descripcion</th>
-              <th scope="col">Nota</th>
-            
-            </tr>
-          </thead>
-          <%for(let i = 0; i < result.length; i++){%>
-            <tbody>
+        
+        <div class="d-flex justify-between">
+          <select name="categoria" id="categoria" class="form-select mt-3 m-3">
+            <option value="11">11</option>
+            <option value="10">10</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+          </select>
+          
+          <select name="categoria" id="categoria" class="form-select mt-3 m-3">
+            <option value="matematicas">Matematicas</option>
+            <option value="espanol">Español</option>
+            <option value="geometria">Geometria</option>
+            <option value="filosofia">Filosofia</option>
+          </select>
+          <select name="categoria" id="categoria" class="form-select mt-3 m-3">
+            <option value="nota"> <%= result.descripcion_nota%></option>
+          </select>
+        </div>
+        <div>
+          <table class="table table-striped">
+            <thead>
               <tr>
-                <td> 
-                  <%= result[i].tipo_nota%> 
-              </td>
-                <td> 
-                 <%= result[i].descripcion_nota%> 
-              </td>
-                <td><%= result[i].nota%> </td>
-                <td>
-                  <a href="/subirN">
-                  <button class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                    <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                  </svg></button>
-                </a>
-                </td>
-                <td>
-                  <button class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                      <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
-                    </svg>
-                  </button>
-                </td>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Nota</th>
+                <th scope="col">Id.Nota</th>
               </tr>
-            </tbody>
-          <%}%>
-        </table>
-    
+            </thead>
+            <%for(let i = 0; i < result.length; i++){%>
+              <form action="/subirnota" method="post">
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td><a href="/userPrueba"> <%= result[i].nombre%> </a></td>
+                    <td><input class="rounded-3" type="number" name="nota" /></td>
+                    <td><p><%= result[i].id_nota%></p></td>
+                    <input type="hidden" name="id_nota" value="<%= result[i].id_nota%>">
+                  </tr>
+                </tr>
+              </tbody>
+            </form>
+              <%}%>
+          </table>
+        </div>
+        <div class="container">
+          <button class="btn btn-primary">
+            <input type="submit" class="btn btn-primary">
+          </button>
+        </div>
       </div>
+    
+
+     
 
       <!--/Main-->
     </div>
